@@ -5,23 +5,25 @@
 
 'patterns' : [
     {
-        'match': '#[a-zA-Z0-9]+'
-        'name': 'keyword.control'
       'comment': 'ID'
+      'match': '#([a-zA-Z0-9]+)'
+      'captures':
+        '1': 'name': 'keyword.control.id.elk'
     }
     {
-      'match': '[.][a-zA-Z0-9]+'
-      'name': 'entity.other.attribute-name'
       'comment': 'Class'
+      'match': '[.]([a-zA-Z0-9]+)'
+      'captures':
+          '1': 'name': 'entity.other.attribute-name.class.elk'
     }
     {
       'comment': 'Tag'
       'match': '[a-zA-Z0-9]+'
-      'name': 'variable.parameter'
+      'name': 'variable.parameter.tag.elk'
     }
     {
       'comment': 'String'
       'match': '"((?:\\.|.)*?)"'
-      'name': 'string.quoted'
+      'name': 'string.quoted.elk'
     }
 ]
