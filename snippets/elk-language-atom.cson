@@ -1,0 +1,61 @@
+'.source.elk':
+  # A
+  'Anchor':
+    'prefix': 'a'
+    'body': 'a@${1:"http$2://$3"}: $4'
+  #B
+  'Body tag':
+    'prefix': 'body'
+    'body': 'body {\n\t$1\n}$2'
+  # H
+  'Page template':
+    'prefix': 'html'
+    'body': 'html {\n\thead {\n\t\ttitle: $1\n\t}\n\tbody {\n\t\t$2\n\t}\n}'
+  # I
+  'Image':
+    'prefix': 'img'
+    'body': 'img [src = ${1:"$2"}]$3'
+  # S
+  'Script':
+    'prefix': 'script'
+    'body': 'script@${1:"$2"}$3'
+  'Script with body':
+    'prefix': 'scriptb'
+    'body': 'script: "$1"$2'
+  # T
+  'Tag with class':
+    'prefix': 'tc'
+    'body': '$1.$2: $3'
+  'Tag with class and body':
+    'prefix': 'tcb'
+    'body': '$1.$2 {\n\t$3\n}\n$4'
+  'Tag with class and id':
+    'prefix': 'tci'
+    'body': '$1.$2#$3: $4'
+  'Tag with class, id and body':
+    'prefix': 'tcib'
+    'body': '$1.$2#$3 {\n\t$4\n}\n$5'
+  'Tag with id':
+    'prefix': 'ti'
+    'body': '$1#$2: $3'
+  'Tag with id and body':
+    'prefix': 'tib'
+    'body': '$1#$2 {\n\t$3\n}\n$4'
+  'Tag with class and attribute':
+    'prefix': 'tca'
+    'body': '$1.$2 [$3 = $4]: $5'
+  'Tag with class, attribute and body':
+    'prefix': 'tcab'
+    'body': '$1.$2 [$3 = $4] {\n\t$5\n}\n$6'
+  'Tag with class, id and attribute':
+    'prefix': 'tcia'
+    'body': '$1.$2#$3 [$4 = $5]: $6'
+  'Tag with class, id, attribute and body':
+    'prefix': 'tciab'
+    'body': '$1.$2#$3 [$4 = $5] {\n\t$6\n}\n$7'
+  'Tag with id and attribute':
+    'prefix': 'tia'
+    'body': '$1#$2 [$3 = $4]: $5'
+  'Tag with id, attribute and body':
+    'prefix': 'tiab'
+    'body': '$1#$2 [$3 = $4] {\n\t$5\n}\n$6'
