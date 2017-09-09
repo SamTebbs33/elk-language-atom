@@ -1,0 +1,16 @@
+{
+  "name": "elk-language-atom",
+  "main": "./lib/elk-language-atom",
+  "version": "0.0.2",
+  "description": "Atom support for the Elk markup language",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "elk-language-atom:toggle"
+  },
+  "repository": "https://github.com/SamTebbs33/elk-language-atom",
+  "license": "GPL3",
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "dependencies": {}
+}

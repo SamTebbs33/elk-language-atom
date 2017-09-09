@@ -1,0 +1,27 @@
+'scopeName': 'source.elk'
+'name': 'Elk'
+'comment': 'The Elk markup laguage'
+'fileTypes': [ 'elk' ]
+
+'patterns' : [
+    {
+        'comment': 'Elk ID'
+        'match': '#[a-zA-Z0-9]+'
+        'name': 'keyword.control'
+    }
+    {
+      'comment': 'Elk class'
+      'match': '[.][a-zA-Z0-9]+'
+      'name': 'entity.other.attribute-name'
+    }
+    {
+      'comment': 'Elk tag'
+      'match': '[a-zA-Z0-9]+'
+      'name': 'variable.parameter'
+    }
+    {
+      'comment': 'Elk string'
+      'match': '"((?:\\.|.)*?)"'
+      'name': 'string.quoted'
+    }
+]
