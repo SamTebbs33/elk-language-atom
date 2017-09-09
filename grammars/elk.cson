@@ -17,6 +17,18 @@
           '1': 'name': 'entity.other.attribute-name.class.elk'
     }
     {
+      'comment': 'Function call'
+      'match': '([a-zA-Z]+[a-zA-Z0-9]*)[(]'
+      'captures':
+        '1': 'name': 'support.function.elk'
+    }
+    {
+      'comment': 'Variable'
+      'match': '([$][a-zA-Z]+[a-zA-Z0-9]*)'
+      'captures':
+        '1': 'name': 'entity.name.type.object.elk'
+    }
+    {
       'comment': 'Tag'
       'match': '[a-zA-Z0-9]+'
       'name': 'variable.parameter.tag.elk'
