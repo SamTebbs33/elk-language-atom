@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle elk",
+        "command": "elk:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "elk",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "elk:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

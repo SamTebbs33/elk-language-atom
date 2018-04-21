@@ -5,37 +5,111 @@
 
 'patterns' : [
     {
+      'comment': 'Floating point number'
+      'match': '-?[0-9]*[.][0-9]+'
+      'name': 'text.basic.elk'
+    }
+    {
+      'comment': 'Hex integer'
+      'match': '0x[a-f0-9A-F]+'
+      'name': 'text.basic.elk'
+    }
+    {
+      'comment': 'Octal integer'
+      'match': '0o[0-7]+'
+      'name': 'text.basic.elk'
+    }
+    {
+      'comment': 'Binary integer'
+      'match': '0b[01]+'
+      'name': 'text.basic.elk'
+    }
+    {
+      'comment': 'Denary integer'
+      'match': '-?[0-9]+'
+      'name': 'text.basic.elk'
+    }
+    {
+      'comment': 'String'
+      'match': '"((?:\\.|.|\n)*?)"'
+      'name': 'string.quoted.elk'
+    }
+    {
       'comment': 'ID'
-      'match': '#([a-zA-Z0-9]+)'
+      'match': '#((?:-|[_a-zA-Z0-9])+[_a-zA-Z0-9]*)'
       'captures':
-        '1': 'name': 'keyword.control.id.elk'
+        '1': 'name': 'entity.other.attribute-name.id'
     }
     {
       'comment': 'Class'
-      'match': '[.]([a-zA-Z0-9]+)'
+      'match': '[.]((?:-|[_a-z])+[_a-zA-Z0-9]*)'
       'captures':
           '1': 'name': 'entity.other.attribute-name.class.elk'
     }
     {
       'comment': 'Function call'
-      'match': '([a-zA-Z]+[a-zA-Z0-9]*)[(]'
+      'match': '([_a-zA-Z]+[_a-zA-Z0-9]*)[(]'
       'captures':
-        '1': 'name': 'support.function.elk'
+        '1': 'name': 'keyword.control.id.elk'
     }
     {
       'comment': 'Variable'
-      'match': '([$][a-zA-Z]+[a-zA-Z0-9]*)'
+      'match': '([$][_a-zA-Z]+[_a-zA-Z0-9]*(?:[.][_a-zA-Z0-9]*)*)'
       'captures':
         '1': 'name': 'entity.name.type.object.elk'
+        '2': 'name': 'entity.name.type.object.elk'
+    }
+    {
+      'comment': 'If statement'
+      'match': '(if)[ \t\n]+'
+      'name': 'keyword.control.id.elk'
+    }
+    {
+      'comment': 'For loop'
+      'match': '(for)[ \t\n]+([a-zA-Z0-9]+)[ \t\n]+(in)'
+      'captures':
+        '1': 'name': 'keyword.control.id.elk'
+        '2': 'name': 'entity.name.type.object.elk'
+        '3': 'name': 'keyword.control.id.elk'
+    }
+    {
+      'comment': 'Data declaration'
+      'match': '(data)[ \t\n]*[{]'
+      'captures': '1': 'name': 'keyword.control.id.elk'
+    }
+    {
+      'comment': 'Match'
+      'match': '(match)[ \t\n]+'
+      'captures':
+        '1': 'name': 'keyword.control.id.elk'
+    }
+    {
+      'comment': 'Else statement'
+      'match': 'else'
+      'name': 'keyword.control.id.elk'
+    }
+    {
+      'comment': 'Default match case'
+      'match': '(default)'
+      'captures':
+        '1': 'name': 'keyword.control.id.elk'
+    }
+    {
+      'comment': 'Match case'
+      'match': '(case)[ \t\n]+'
+      'captures':
+        '1': 'name': 'keyword.control.id.elk'
+    }
+    {
+      'comment': 'Template'
+      'match': '(template)[ \t\n]+((?:-|[_a-zA-Z0-9])+[_a-zA-Z0-9]*)'
+      'captures':
+        '1': 'name': 'keyword.control.id.elk'
+        '2': 'name': 'variable.parameter.tag.elk'
     }
     {
       'comment': 'Tag'
       'match': '[a-zA-Z0-9]+'
       'name': 'variable.parameter.tag.elk'
-    }
-    {
-      'comment': 'String'
-      'match': '"((?:\\.|.)*?)"'
-      'name': 'string.quoted.elk'
     }
 ]

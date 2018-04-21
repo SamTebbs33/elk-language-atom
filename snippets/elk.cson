@@ -23,6 +23,9 @@
     'prefix': 'scriptb'
     'body': 'script: "$1"$2'
   # T
+  'Template':
+    'prefix': 'tem'
+    'body': 'template $1($2) {\n\t$3\n}'
   'Tag with class':
     'prefix': 'tc'
     'body': '$1.$2: $3'
